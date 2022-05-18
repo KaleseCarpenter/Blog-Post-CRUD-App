@@ -42,6 +42,7 @@ placeholder{
 .topTbl{
     border: #000;
     border-radius: 40%;
+    font-size:18px;
 }
 tr:nth-child(even),table.list thead>tr{
     background-color: #d1f8f7;
