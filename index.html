@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Address Book</title>
+    <title>Job Tracker Checklist</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/dc/Yes-check-icon-transparent.png">
 </head>
 <body>
+
+    <h1 class="title">Track Your Job Applications</h1>
     <table>
         <tr>
             <td>
-                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <form onsubmit="event.preventDefault();formSubmit();" autocomplete="off">
                     <div> <!-- html form for CRUD Operations-->
-                        <label>Full Name</label>
-                        <input type="text" name="fullName" id="fullName">
+                        <label>Company Name</label><label class="validation-error hide" id="companyValidationError">This field is required.</label>
+                        <input type="text" name="companyName" id="companyName" placeholder="Lyft, Inc.">
                     </div>
                     <div>
-                        <label>EMP Code</label>
-                        <input type="text" name="empCode" id="empCode">
+                        <label>Date Applied</label>
+                        <input type="text" name="dateApplied" id="dateApplied" placeholder="05-17-22">
                     </div>
                     <div>
                         <label>Salary</label>
-                        <input type="text" name="salary" id="salary">
+                        <input type="text" name="salary" id="salary" placeholder="$200K or $200,000">
                     </div>
                     <div>
-                        <label>City</label>
-                        <input type="text" name="city" id="city">
+                        <label>City / State</label>
+                        <input type="text" name="cityState" id="cityState" placeholder="San Francisco, CA">
                     </div>
                     <div class="form-action-buttons">
                         <input type="submit" value="Submit">
@@ -35,13 +38,13 @@
             </td>
             </table>
             <td><!-- table to list all records -->
-                <table class="list" id="employeeList">
+                <table class="list" id="formSubmissions">
                     <thead>
                         <tr>
-                            <th>Full Name</th>
-                            <th>EMP Code</th>
+                            <th>Company Name</th>
+                            <th>Date Applied</th>
                             <th>Salary</th>
-                            <th>City</th>
+                            <th> City / State</th>
                             <th> </th>
                         </tr>
                     </thead>
