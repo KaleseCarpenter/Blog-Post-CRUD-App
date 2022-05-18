@@ -14,15 +14,14 @@ body {
 
 table{
     border-collapse: collapse;
-    table-layout: auto;
+    table-layout: fixed;
     /* width: 100%; */
 }
 
 table.list{
     width: 70%;
     margin-top: 20px;
-    table-layout: auto;
-   
+    table-layout: fixed;  
 }
 
  th, td  {
@@ -31,6 +30,10 @@ table.list{
     padding: 8px;
     font-family: 'Baloo Tamma 2', cursive;
     margin-bottom: 40%;
+}
+
+td{
+    word-wrap: break-word;
 }
 
 
@@ -147,7 +150,7 @@ h1 {
     transition: all 0.2s ease-in;
   }
   
-  a:hover {
+  a{
     animation: color-shift 1.5s alternate infinite;
 }
 
