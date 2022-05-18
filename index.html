@@ -4,57 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Tracker Checklist</title>
+    <title>Job Trackr</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/dc/Yes-check-icon-transparent.png">
 </head>
 <body>
 
-    <h1 class="title">Track Your Job Applications</h1>
-    <table>
-        <tr>
-            <td>
-                <form onsubmit="event.preventDefault();formSubmit();" autocomplete="off">
-                    <div> <!-- html form for CRUD Operations-->
-                        <label>Company Name</label><label class="validation-error hide" id="companyValidationError">This field is required.</label>
-                        <input type="text" name="companyName" id="companyName" placeholder="Lyft, Inc.">
-                    </div>
-                    <div>
-                        <label>Date Applied</label>
-                        <input type="text" name="dateApplied" id="dateApplied" placeholder="05-17-22">
-                    </div>
-                    <div>
-                        <label>Salary</label>
-                        <input type="text" name="salary" id="salary" placeholder="$200K or $200,000">
-                    </div>
-                    <div>
-                        <label>City / State</label>
-                        <input type="text" name="cityState" id="cityState" placeholder="San Francisco, CA">
-                    </div>
-                    <div class="form-action-buttons">
-                        <input type="submit" value="Submit">
-                    </div>
-                </form> 
-            </td>
-            </table>
-            <td><!-- table to list all records -->
-                <table class="list" id="formSubmissions">
-                    <thead>
-                        <tr>
-                            <th>Company Name</th>
-                            <th>Date Applied</th>
-                            <th>Salary</th>
-                            <th> City / State</th>
-                            <th> </th>
-                        </tr>
-                    </thead>
-                    <tbody>
+    <div class="title"><h1 class="title"><a href="#">Welcome to JobTrackr</a></h1></div>
+    <div class="container">
 
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    
+        <table class="topTbl" >
+            <tr>
+                <td style="border-bottom-style: hidden;">
+                    <form onsubmit="event.preventDefault();formSubmit();" autocomplete="off">
+                        <div> <!-- html form for CRUD Operations-->
+                            <label>Company Name</label><label class="validation-error hide" id="companyValidationError">This field is required.</label>
+                            <input type="text" name="companyName" id="companyName" placeholder="Lyft, Inc.">
+                        </div>
+                        <div>
+                            <label>Position Title</label>
+                            <input type="text" name="positionTitle" id="positionTitle" placeholder="Software Engineer">
+                        </div>
+                        <div>
+                            <label>Date Applied</label>
+                            <input type="text" name="dateApplied" id="dateApplied" placeholder="05-17-22">
+                        </div>
+                        <div>
+                            <label>Method of Application</label>
+                            <input type="text" name="applyMethod" id="applyMethod" placeholder="Job board or Recruiter">
+                        </div>
+                        <div>
+                            <label>Salary</label>
+                            <input type="text" name="salary" id="salary" placeholder="$200K or $200,000">
+                        </div>
+                        <div>
+                            <label>City / State</label>
+                            <input type="text" name="cityState" id="cityState" placeholder="San Francisco, CA">
+                        </div>
+                        <div>
+                            <label>Status</label>
+                            <input type="text" name="appStatus" id="appStatus" placeholder="Received offer or Rejected">
+                        </div>
+                        <div class="form-action-buttons">
+                            <input type="submit" value="Submit" class="submitBtn">
+                        </div>
+                    </form> 
+                </td>
+        </table>
+    </div>
+    <div class="container2">
+                <td><!-- table to list all records -->
+                    <table class="list" id="formSubmissions">
+                        <thead>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Position Title</th>
+                                <th>Date Applied</th>
+                                <th>Method of Application</th>
+                                <th>Salary</th>
+                                <th>City / State</th>
+                                <th>Status</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+    </div>
+        
 <script src="script.js"></script>
 </body>
 </html>
