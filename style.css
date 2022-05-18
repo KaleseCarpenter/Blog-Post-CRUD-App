@@ -34,7 +34,6 @@ table.list{
 }
 
 
-
 placeholder{
     font-family: 'Baloo Tamma 2', cursive;
 }
@@ -68,7 +67,9 @@ input[type=submit]{
     border: 4px;
     border-radius: 4px;
     cursor: pointer;
+    font-family: 'Baloo Tamma 2', cursive;;
 
+    font-size: medium;
 }
 
 /* .submitBtn{
@@ -147,7 +148,7 @@ h1 {
   }
   
   a:hover {
-    animation: color-shift 1s alternate infinite;
+    animation: color-shift 1.5s alternate infinite;
 }
 
 @keyframes color-shift {
@@ -176,4 +177,16 @@ h1 {
     color: rgb(198, 5, 5);
   }
 
+}
+
+.h3Text{
+    text-align: center;
+    font-family:'Baloo Tamma 2', cursive;
+    color: rgb(4, 6, 6);
+    text-shadow: -1px 1px 5px #000,
+				  1px 1px 5px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
+    margin: 4%;
+    font-size: 25px;
 }
